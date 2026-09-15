@@ -29,7 +29,7 @@ scripts/             # validation and index generation (Node.js 24, no dependenc
 | Workflow | When | What |
 | --- | --- | --- |
 | **Validate** | Every pull request and push to `main` | Type-check, test with 95% coverage, validate all books, reject hand-edited `index.json` |
-| **Publish index** | Push to `main` touching books, categories, or scripts | Regenerate `index.json`, commit it, purge the jsDelivr cache |
+| **Publish index** | Push to `main` touching books, categories, scripts, or this workflow; manual dispatch | Regenerate `index.json`, commit it, purge the jsDelivr cache |
 
 ## Contributing
 

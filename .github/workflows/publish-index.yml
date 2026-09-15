@@ -7,6 +7,7 @@ on:
       - "books/**"
       - "categories.json"
       - "scripts/**"
+      - ".github/workflows/publish-index.yml"
   workflow_dispatch:
 
 permissions:
