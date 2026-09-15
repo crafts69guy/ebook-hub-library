@@ -1,0 +1,16 @@
+{
+  "title": "Book Title",
+  "authors": ["Author Name"],
+  "language": "en",
+  "categories": ["fiction"],
+  "license": "public-domain",
+  "source": "https://www.gutenberg.org/ebooks/0",
+  "version": "1.0.0",
+  "summary": "One or two sentences about the book.",
+  "chapters": [
+    {
+      "title": "Chapter 1",
+      "file": "chapters/0001.md"
+    }
+  ]
+}
