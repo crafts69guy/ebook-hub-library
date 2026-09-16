@@ -10,8 +10,8 @@ Only these licenses are accepted:
 | --- | --- |
 | `public-domain` | Works whose copyright has expired, such as many Project Gutenberg titles |
 | `CC0-1.0` | Works dedicated to the public domain |
-| `CC-BY-4.0` | Attribution required |
-| `CC-BY-SA-4.0` | Attribution and share-alike required |
+| `CC-BY-4.0`, `CC-BY-3.0` | Attribution required |
+| `CC-BY-SA-4.0`, `CC-BY-SA-3.0` | Attribution and share-alike required |
 
 - The edition or translation you submit must be free too, not only the original work.
 - `source` must link to the original publication that shows the license.
@@ -39,13 +39,25 @@ Edit `book.json`:
 | `version` | Required, semantic version such as `1.0.0`; bump it when you change the text |
 | `summary` | Optional, at most 280 characters |
 | `chapters` | Required, ordered list of `{ "title", "file" }` with files named `chapters/0001.md` |
+| `images` | Optional, list of bundled image paths named `images/0001.png` |
 
 Chapter files:
 
 - UTF-8 Markdown, not empty, at most 2 MB each; the whole book at most 20 MB.
-- No raw HTML, HTML comments, or images.
+- No raw HTML or HTML comments.
 - No `javascript:`, `data:`, `vbscript:`, or `file:` links.
-- Only `book.json` and the chapter files it lists may exist in the book folder.
+- Only `book.json` and the files it lists may exist in the book folder.
+
+Images:
+
+- Bundle them in the book folder as `images/0001.png`, and list every one in
+  `images`. PNG, JPEG, and WebP are accepted, at most 2 MB each.
+- Reference them from a chapter exactly as they are listed:
+  `![Plate I](images/0001.png)`. Every listed image must be used, and every
+  used image must be listed.
+- Remote images are rejected. Nothing outside this repository is covered by the
+  index digests, and fetching one while reading would tell its host who is
+  reading what.
 
 ## 3. Validate and Open a Pull Request
 
