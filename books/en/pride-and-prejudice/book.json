@@ -1,0 +1,262 @@
+{
+  "title": "Pride and Prejudice",
+  "authors": [
+    "Jane Austen"
+  ],
+  "language": "en",
+  "categories": [
+    "classics",
+    "fiction",
+    "romance"
+  ],
+  "license": "public-domain",
+  "source": "https://standardebooks.org/ebooks/jane-austen/pride-and-prejudice",
+  "version": "1.0.0",
+  "summary": "Pride and Prejudice may today be one of Jane Austen’s most enduring novels, having been widely adapted to stage, screen, and other media since its publication in 1813. The novel tells the tale of five unmarried sisters and how their lives change when a wealthy eligible bachelor…",
+  "chapters": [
+    {
+      "title": "I",
+      "file": "chapters/0001.md"
+    },
+    {
+      "title": "II",
+      "file": "chapters/0002.md"
+    },
+    {
+      "title": "III",
+      "file": "chapters/0003.md"
+    },
+    {
+      "title": "IV",
+      "file": "chapters/0004.md"
+    },
+    {
+      "title": "V",
+      "file": "chapters/0005.md"
+    },
+    {
+      "title": "VI",
+      "file": "chapters/0006.md"
+    },
+    {
+      "title": "VII",
+      "file": "chapters/0007.md"
+    },
+    {
+      "title": "VIII",
+      "file": "chapters/0008.md"
+    },
+    {
+      "title": "IX",
+      "file": "chapters/0009.md"
+    },
+    {
+      "title": "X",
+      "file": "chapters/0010.md"
+    },
+    {
+      "title": "XI",
+      "file": "chapters/0011.md"
+    },
+    {
+      "title": "XII",
+      "file": "chapters/0012.md"
+    },
+    {
+      "title": "XIII",
+      "file": "chapters/0013.md"
+    },
+    {
+      "title": "XIV",
+      "file": "chapters/0014.md"
+    },
+    {
+      "title": "XV",
+      "file": "chapters/0015.md"
+    },
+    {
+      "title": "XVI",
+      "file": "chapters/0016.md"
+    },
+    {
+      "title": "XVII",
+      "file": "chapters/0017.md"
+    },
+    {
+      "title": "XVIII",
+      "file": "chapters/0018.md"
+    },
+    {
+      "title": "XIX",
+      "file": "chapters/0019.md"
+    },
+    {
+      "title": "XX",
+      "file": "chapters/0020.md"
+    },
+    {
+      "title": "XXI",
+      "file": "chapters/0021.md"
+    },
+    {
+      "title": "XXII",
+      "file": "chapters/0022.md"
+    },
+    {
+      "title": "XXIII",
+      "file": "chapters/0023.md"
+    },
+    {
+      "title": "XXIV",
+      "file": "chapters/0024.md"
+    },
+    {
+      "title": "XXV",
+      "file": "chapters/0025.md"
+    },
+    {
+      "title": "XXVI",
+      "file": "chapters/0026.md"
+    },
+    {
+      "title": "XXVII",
+      "file": "chapters/0027.md"
+    },
+    {
+      "title": "XXVIII",
+      "file": "chapters/0028.md"
+    },
+    {
+      "title": "XXIX",
+      "file": "chapters/0029.md"
+    },
+    {
+      "title": "XXX",
+      "file": "chapters/0030.md"
+    },
+    {
+      "title": "XXXI",
+      "file": "chapters/0031.md"
+    },
+    {
+      "title": "XXXII",
+      "file": "chapters/0032.md"
+    },
+    {
+      "title": "XXXIII",
+      "file": "chapters/0033.md"
+    },
+    {
+      "title": "XXXIV",
+      "file": "chapters/0034.md"
+    },
+    {
+      "title": "XXXV",
+      "file": "chapters/0035.md"
+    },
+    {
+      "title": "XXXVI",
+      "file": "chapters/0036.md"
+    },
+    {
+      "title": "XXXVII",
+      "file": "chapters/0037.md"
+    },
+    {
+      "title": "XXXVIII",
+      "file": "chapters/0038.md"
+    },
+    {
+      "title": "XXXIX",
+      "file": "chapters/0039.md"
+    },
+    {
+      "title": "XL",
+      "file": "chapters/0040.md"
+    },
+    {
+      "title": "XLI",
+      "file": "chapters/0041.md"
+    },
+    {
+      "title": "XLII",
+      "file": "chapters/0042.md"
+    },
+    {
+      "title": "XLIII",
+      "file": "chapters/0043.md"
+    },
+    {
+      "title": "XLIV",
+      "file": "chapters/0044.md"
+    },
+    {
+      "title": "XLV",
+      "file": "chapters/0045.md"
+    },
+    {
+      "title": "XLVI",
+      "file": "chapters/0046.md"
+    },
+    {
+      "title": "XLVII",
+      "file": "chapters/0047.md"
+    },
+    {
+      "title": "XLVIII",
+      "file": "chapters/0048.md"
+    },
+    {
+      "title": "XLIX",
+      "file": "chapters/0049.md"
+    },
+    {
+      "title": "L",
+      "file": "chapters/0050.md"
+    },
+    {
+      "title": "LI",
+      "file": "chapters/0051.md"
+    },
+    {
+      "title": "LII",
+      "file": "chapters/0052.md"
+    },
+    {
+      "title": "LIII",
+      "file": "chapters/0053.md"
+    },
+    {
+      "title": "LIV",
+      "file": "chapters/0054.md"
+    },
+    {
+      "title": "LV",
+      "file": "chapters/0055.md"
+    },
+    {
+      "title": "LVI",
+      "file": "chapters/0056.md"
+    },
+    {
+      "title": "LVII",
+      "file": "chapters/0057.md"
+    },
+    {
+      "title": "LVIII",
+      "file": "chapters/0058.md"
+    },
+    {
+      "title": "LIX",
+      "file": "chapters/0059.md"
+    },
+    {
+      "title": "LX",
+      "file": "chapters/0060.md"
+    },
+    {
+      "title": "LXI",
+      "file": "chapters/0061.md"
+    }
+  ]
+}
