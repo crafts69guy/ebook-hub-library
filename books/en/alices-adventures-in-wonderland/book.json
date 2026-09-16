@@ -1,0 +1,67 @@
+{
+  "title": "Alice's Adventures in Wonderland",
+  "authors": [
+    "Lewis Carroll"
+  ],
+  "language": "en",
+  "categories": [
+    "fiction",
+    "children",
+    "classics",
+    "fantasy"
+  ],
+  "license": "public-domain",
+  "source": "https://www.gutenberg.org/ebooks/11",
+  "version": "1.0.0",
+  "summary": "Alice follows a white rabbit down a hole into a nonsensical world of talking animals, riddles, and a very cross queen.",
+  "chapters": [
+    {
+      "title": "Down the Rabbit-Hole",
+      "file": "chapters/0001.md"
+    },
+    {
+      "title": "The Pool of Tears",
+      "file": "chapters/0002.md"
+    },
+    {
+      "title": "A Caucus-Race and a Long Tale",
+      "file": "chapters/0003.md"
+    },
+    {
+      "title": "The Rabbit Sends in a Little Bill",
+      "file": "chapters/0004.md"
+    },
+    {
+      "title": "Advice from a Caterpillar",
+      "file": "chapters/0005.md"
+    },
+    {
+      "title": "Pig and Pepper",
+      "file": "chapters/0006.md"
+    },
+    {
+      "title": "A Mad Tea-Party",
+      "file": "chapters/0007.md"
+    },
+    {
+      "title": "The Queen’s Croquet-Ground",
+      "file": "chapters/0008.md"
+    },
+    {
+      "title": "The Mock Turtle’s Story",
+      "file": "chapters/0009.md"
+    },
+    {
+      "title": "The Lobster Quadrille",
+      "file": "chapters/0010.md"
+    },
+    {
+      "title": "Who Stole the Tarts?",
+      "file": "chapters/0011.md"
+    },
+    {
+      "title": "Alice’s Evidence",
+      "file": "chapters/0012.md"
+    }
+  ]
+}
