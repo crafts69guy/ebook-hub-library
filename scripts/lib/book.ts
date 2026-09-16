@@ -3,15 +3,18 @@ import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 import { errorMessage, isNonEmptyString, isObject, isStringList } from "./json.ts";
-import { findMarkdownProblems } from "./markdown-rules.ts";
+import { inspectMarkdown } from "./markdown-rules.ts";
 import {
   ALLOWED_LICENSES,
   BOOK_FILE,
   CHAPTER_FILE_PATTERN,
+  IMAGE_FILE_PATTERN,
+  IMAGE_SIGNATURES,
   LANGUAGE_PATTERN,
   MAX_BOOK_BYTES,
   MAX_BOOK_JSON_BYTES,
   MAX_CHAPTER_BYTES,
+  MAX_IMAGE_BYTES,
   MAX_SUMMARY_LENGTH,
   MAX_TITLE_LENGTH,
   SLUG_PATTERN,
@@ -52,7 +55,18 @@ interface Listing {
   problems: string[];
 }
 
-const BOOK_FIELDS = new Set(["title", "authors", "language", "categories", "license", "source", "version", "summary", "chapters"]);
+const BOOK_FIELDS = new Set([
+  "title",
+  "authors",
+  "language",
+  "categories",
+  "license",
+  "source",
+  "version",
+  "summary",
+  "chapters",
+  "images",
+]);
 const MB = 1024 * 1024;
 const strictUtf8 = new TextDecoder("utf-8", { fatal: true });
 
@@ -117,6 +131,44 @@ function readChapterFiles(value: unknown, add: (message: string) => void): strin
     files.push(file);
   });
   return files;
+}
+
+function readImageFiles(value: unknown, add: (message: string) => void): string[] {
+  if (value === undefined) {
+    return [];
+  }
+  if (!Array.isArray(value)) {
+    add("book.json: images must be an array of file paths");
+    return [];
+  }
+  const files: string[] = [];
+  value.forEach((file: unknown, index: number) => {
+    const at = `book.json: images[${index}]`;
+    if (typeof file !== "string" || !IMAGE_FILE_PATTERN.test(file)) {
+      add(`${at} must look like images/0001.png`);
+      return;
+    }
+    if (files.includes(file)) {
+      add(`${at} ${file} is listed more than once`);
+      return;
+    }
+    files.push(file);
+  });
+  return files;
+}
+
+/** Reject a file whose bytes do not match the format its name claims. */
+function isKnownImage(file: string, bytes: Uint8Array): boolean {
+  const extension = file.slice(file.lastIndexOf(".") + 1);
+  const signature = IMAGE_SIGNATURES[extension];
+  if (!signature || bytes.byteLength < signature.length) {
+    return false;
+  }
+  if (signature.some((byte, index) => bytes[index] !== byte)) {
+    return false;
+  }
+  // RIFF also fronts other container formats, so WebP has to name itself at offset 8.
+  return extension !== "webp" || Buffer.from(bytes.subarray(8, 12)).toString("ascii") === "WEBP";
 }
 
 /** Validate one `books/<language>/<slug>` folder and build its index entry when it is valid. */
@@ -202,12 +254,14 @@ export async function validateBook(bookDir: string, context: BookContext): Promi
     add(`book.json: summary must be a string of at most ${MAX_SUMMARY_LENGTH} characters`);
   }
   const chapterFiles = readChapterFiles(raw.chapters, add);
+  const imageFiles = readImageFiles(raw.images, add);
 
   listing.files
-    .filter((file) => file !== BOOK_FILE && !chapterFiles.includes(file))
-    .forEach((file) => add(`${file}: only book.json and the chapter files listed in it are allowed`));
+    .filter((file) => file !== BOOK_FILE && !chapterFiles.includes(file) && !imageFiles.includes(file))
+    .forEach((file) => add(`${file}: only book.json and the files listed in it are allowed`));
 
   const files: IndexFile[] = [{ path: BOOK_FILE, sha256: sha256(bookBytes) }];
+  const referenced = new Set<string>();
   let totalBytes = bookBytes.byteLength;
   for (const file of chapterFiles) {
     if (!listing.files.includes(file)) {
@@ -229,7 +283,33 @@ export async function validateBook(bookDir: string, context: BookContext): Promi
     if (text.trim() === "") {
       add(`${file} is empty`);
     }
-    findMarkdownProblems(text).forEach((problem) => add(`${file}: ${problem}`));
+    const report = inspectMarkdown(text);
+    report.problems.forEach((problem) => add(`${file}: ${problem}`));
+    report.images.forEach((image) => referenced.add(image));
+    files.push({ path: file, sha256: sha256(bytes) });
+  }
+
+  for (const image of referenced) {
+    if (!imageFiles.includes(image)) {
+      add(`${image} is used by a chapter but is not listed in book.json images`);
+    }
+  }
+  for (const file of imageFiles) {
+    if (!referenced.has(file)) {
+      add(`${file} is listed in book.json images but no chapter uses it`);
+    }
+    if (!listing.files.includes(file)) {
+      add(`${file} is listed in book.json but does not exist`);
+      continue;
+    }
+    const bytes = await readFile(join(bookDir, file));
+    totalBytes += bytes.byteLength;
+    if (bytes.byteLength > MAX_IMAGE_BYTES) {
+      add(`${file} is larger than ${MAX_IMAGE_BYTES / MB} MB`);
+    }
+    if (!isKnownImage(file, bytes)) {
+      add(`${file} does not contain the image format its name claims`);
+    }
     files.push({ path: file, sha256: sha256(bytes) });
   }
   if (totalBytes > MAX_BOOK_BYTES) {

@@ -5,6 +5,19 @@ import { dirname, join } from "node:path";
 export const CATEGORIES = ["essays", "fiction", "poetry"];
 export const CHAPTER = "# Economy\n\nWhen I wrote the following pages.\n";
 
+/** A real 1x1 PNG, so image fixtures carry the signature the validator checks. */
+export const PNG = Uint8Array.from(
+  Buffer.from(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
+    "base64",
+  ),
+);
+
+/** A RIFF container that names itself WEBP; enough for signature checks. */
+export const WEBP = Uint8Array.from([
+  0x52, 0x49, 0x46, 0x46, 0x1a, 0x00, 0x00, 0x00, 0x57, 0x45, 0x42, 0x50, 0x56, 0x50, 0x38, 0x4c,
+]);
+
 export function validBook(overrides: Record<string, unknown> = {}): Record<string, unknown> {
   return {
     title: "Walden",

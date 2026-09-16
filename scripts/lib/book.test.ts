@@ -4,11 +4,11 @@ import { rm, symlink } from "node:fs/promises";
 import { join } from "node:path";
 import { after, before, describe, it } from "node:test";
 
-import { CATEGORIES, CHAPTER, createLibrary, validBook, type BookFiles, type TempLibrary } from "../test-helpers.ts";
+import { CATEGORIES, CHAPTER, PNG, WEBP, createLibrary, validBook, type BookFiles, type TempLibrary } from "../test-helpers.ts";
 import { validateBook } from "./book.ts";
 
 const MB = 1024 * 1024;
-const sha256 = (content: string) => createHash("sha256").update(content).digest("hex");
+const sha256 = (content: string | Uint8Array) => createHash("sha256").update(content).digest("hex");
 const context = (language = "en", slug = "walden") => ({ language, slug, categories: new Set(CATEGORIES) });
 
 let library: TempLibrary;
@@ -137,7 +137,7 @@ describe("validateBook", () => {
       }),
       files: { "chapters/0001.md": CHAPTER, "chapters/0002.md": CHAPTER, "cover.png": "png" },
     });
-    assertIncludes(errors, "chapters/0002.md: only book.json and the chapter files listed in it are allowed");
+    assertIncludes(errors, "chapters/0002.md: only book.json and the files listed in it are allowed");
     assertIncludes(errors, "cover.png: only book.json");
     assertIncludes(errors, "chapters/0003.md is listed in book.json but does not exist");
 
@@ -168,6 +168,103 @@ describe("validateBook", () => {
     });
     assertIncludes(errors, "the book is larger than 20 MB");
   });
+
+  it("hashes bundled images into the entry alongside the chapters", async () => {
+    const dir = await library.writeBook("en", "illustrated", {
+      book: validBook({ images: ["images/0001.png", "images/0002.webp"] }),
+      files: {
+        "chapters/0001.md": `${CHAPTER}\n![Plate I](images/0001.png)\n![Plate II](images/0002.webp)\n`,
+        "images/0001.png": PNG,
+        "images/0002.webp": WEBP,
+      },
+    });
+
+    const { entry, errors } = await validateBook(dir, context("en", "illustrated"));
+
+    assert.deepEqual(errors, []);
+    assert.deepEqual(entry?.files.slice(1), [
+      { path: "chapters/0001.md", sha256: sha256(`${CHAPTER}\n![Plate I](images/0001.png)\n![Plate II](images/0002.webp)\n`) },
+      { path: "images/0001.png", sha256: sha256(PNG) },
+      { path: "images/0002.webp", sha256: sha256(WEBP) },
+    ]);
+  });
+
+  it("keeps the chapter text and the declared images in step", async () => {
+    assertIncludes(
+      await errorsFor("undeclared-image", {
+        files: { "chapters/0001.md": "![Plate](images/0001.png)", "images/0001.png": PNG },
+      }),
+      "images/0001.png is used by a chapter but is not listed in book.json images",
+    );
+    assertIncludes(
+      await errorsFor("unused-image", {
+        book: validBook({ images: ["images/0001.png"] }),
+        files: { "chapters/0001.md": CHAPTER, "images/0001.png": PNG },
+      }),
+      "images/0001.png is listed in book.json images but no chapter uses it",
+    );
+    assertIncludes(
+      await errorsFor("absent-image", {
+        book: validBook({ images: ["images/0001.png"] }),
+        files: { "chapters/0001.md": "![Plate](images/0001.png)" },
+      }),
+      "images/0001.png is listed in book.json but does not exist",
+    );
+  });
+
+  it("rejects images that are misnamed, oversized, or not what they claim", async () => {
+    assertIncludes(
+      await errorsFor("fake-image", {
+        book: validBook({ images: ["images/0001.png"] }),
+        files: { "chapters/0001.md": "![Plate](images/0001.png)", "images/0001.png": "not a png" },
+      }),
+      "images/0001.png does not contain the image format its name claims",
+    );
+    assertIncludes(
+      await errorsFor("short-image", {
+        book: validBook({ images: ["images/0001.webp"] }),
+        files: { "chapters/0001.md": "![Plate](images/0001.webp)", "images/0001.webp": new Uint8Array([0x52]) },
+      }),
+      "images/0001.webp does not contain the image format its name claims",
+    );
+    assertIncludes(
+      await errorsFor("riff-not-webp", {
+        book: validBook({ images: ["images/0001.webp"] }),
+        files: {
+          "chapters/0001.md": "![Plate](images/0001.webp)",
+          "images/0001.webp": new Uint8Array([0x52, 0x49, 0x46, 0x46, 0, 0, 0, 0, 0x41, 0x56, 0x49, 0x20]),
+        },
+      }),
+      "images/0001.webp does not contain the image format its name claims",
+    );
+    assertIncludes(
+      await errorsFor("big-image", {
+        book: validBook({ images: ["images/0001.png"] }),
+        files: {
+          "chapters/0001.md": "![Plate](images/0001.png)",
+          "images/0001.png": Uint8Array.from([...PNG, ...new Uint8Array(2 * MB)]),
+        },
+      }),
+      "images/0001.png is larger than 2 MB",
+    );
+  });
+
+  const imageFieldCases: [string, Record<string, unknown>, string][] = [
+    ["non array images", { images: "images/0001.png" }, "images must be an array of file paths"],
+    ["badly named images", { images: ["cover.png"] }, "images[0] must look like images/0001.png"],
+    ["unsupported image formats", { images: ["images/0001.tiff"] }, "images[0] must look like images/0001.png"],
+    ["repeated images", { images: ["images/0001.png", "images/0001.png"] }, "images[1] images/0001.png is listed more than once"],
+  ];
+
+  for (const [label, overrides, message] of imageFieldCases) {
+    it(`rejects ${label}`, async () => {
+      const slug = label.replaceAll(" ", "-");
+      const dir = await library.writeBook("en", slug, { book: validBook(overrides) });
+      const result = await validateBook(dir, context("en", slug));
+      assertIncludes(result.errors, message);
+      assert.equal(result.entry, null);
+    });
+  }
 
   it("rejects invalid language and slug folder names", async () => {
     const dir = await library.writeBook("en", "folder-names");
