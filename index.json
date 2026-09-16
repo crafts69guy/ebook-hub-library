@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T04:39:13.564Z",
+  "generatedAt": "2026-09-16T14:30:19.473Z",
   "repository": "https://github.com/crafts69guy/ebook-hub-library",
   "ref": "main",
   "books": [
@@ -73,6 +73,490 @@
         {
           "path": "chapters/0012.md",
           "sha256": "0d34054ff3ab07c1861ec17c228803250aa45a0acfdcf1b451dc489aa05aba60"
+        }
+      ]
+    },
+    {
+      "slug": "frankenstein",
+      "version": "1.0.0",
+      "title": "Frankenstein",
+      "authors": [
+        "Mary Shelley"
+      ],
+      "language": "en",
+      "categories": [
+        "classics",
+        "fiction",
+        "science-fiction"
+      ],
+      "license": "public-domain",
+      "summary": "Mary Shelley (then Godwin) and Percy Bysshe Shelley were visiting their friend Lord Byron in Geneva one rainy summer. With the weather against them, they decided to spend their time writing ghost stories for each other. Frankenstein is Mary Shelley’s submission to their…",
+      "path": "books/en/frankenstein",
+      "files": [
+        {
+          "path": "book.json",
+          "sha256": "f11836726392e445cb4106f9739e921f4fb0a89e1a9ff8841e345cbdedf19247"
+        },
+        {
+          "path": "chapters/0001.md",
+          "sha256": "1e43e2cfdf6f1bacd4b23dfb558cf191257658519d55f563e357d4c96784f1ac"
+        },
+        {
+          "path": "chapters/0002.md",
+          "sha256": "9d3168e023a81fa486bbc41fcb2a4a3bd35b4e926594cb6863b610574a4f0156"
+        },
+        {
+          "path": "chapters/0003.md",
+          "sha256": "bf7ca0c9985b2d9b17b5f669ccc1f9c55bdb2df6c62ad7df9ba01b54d739e95c"
+        },
+        {
+          "path": "chapters/0004.md",
+          "sha256": "fb0b9c3864514166ee4c8674b349d4737dd1861f2edb0b9feb1220582974825b"
+        },
+        {
+          "path": "chapters/0005.md",
+          "sha256": "76f2493c24b2be3f733a4aa9c0f76c5c527fe4ca44b70bfd46260731d3f35809"
+        },
+        {
+          "path": "chapters/0006.md",
+          "sha256": "e6d6e7992f1b564618a03c176b003f10578c5fb9aacb1ede0b5de23d3145db02"
+        },
+        {
+          "path": "chapters/0007.md",
+          "sha256": "a368e2c4e949326b3ad8b23069e4501491b42f9bd7dbea3178e1ef66131b344b"
+        },
+        {
+          "path": "chapters/0008.md",
+          "sha256": "e9f50f55d38b4a0e82fd3b939de31b54d11c7c37fd564d5a9779ab19df6609d2"
+        },
+        {
+          "path": "chapters/0009.md",
+          "sha256": "0d4be854735a641142f08bdc44d6e5008e9f2a1f174b63cded2442524b0a48c9"
+        },
+        {
+          "path": "chapters/0010.md",
+          "sha256": "2b89667eabcfd6c26c30a1bc642080cf6c17b11f6b55136db1875e2155a81c66"
+        },
+        {
+          "path": "chapters/0011.md",
+          "sha256": "a58b2f225904603eeec62c86c5283d20a51cdd6a8008f4c083b64b74d6aba9d8"
+        },
+        {
+          "path": "chapters/0012.md",
+          "sha256": "4ec4b8591124d30592195a2a2eb91183b96f6a928e66b4cb53691197c55f9e72"
+        },
+        {
+          "path": "chapters/0013.md",
+          "sha256": "6197a258e0c8ec9c5265e9f07b2973c0bfb4c98de54a70741966b1e39d9406f2"
+        },
+        {
+          "path": "chapters/0014.md",
+          "sha256": "1127a94e7f0ed8dc2652512e1d1b6b0ba954982793ff9492fc70305f0d2884ed"
+        },
+        {
+          "path": "chapters/0015.md",
+          "sha256": "5ae054f18b4a8f17e5b1afd5ffe67888c481634b7cf22b450dce18a7ba765a4b"
+        },
+        {
+          "path": "chapters/0016.md",
+          "sha256": "a49e96c4ab69f7e61d5b7d7f130817d6fc70db22723899c117a2880dacece73b"
+        },
+        {
+          "path": "chapters/0017.md",
+          "sha256": "a26eb2d9d3465b5961c1f999bb37f4de3c66335d9193c15006bdb4c248e35aa6"
+        },
+        {
+          "path": "chapters/0018.md",
+          "sha256": "b7169ecd9a6d8a5362eac06826d599da52253a68a1937f5f5a834f38977faccb"
+        },
+        {
+          "path": "chapters/0019.md",
+          "sha256": "66cc974c85bace0839a67b65ab2aa103976537a704a000cf1a7297e71229652e"
+        },
+        {
+          "path": "chapters/0020.md",
+          "sha256": "6d1004aa7c7a6efbe0b2b6e4df6a59d4f1e1c9cc0c67a88dec6e7adf4d2934db"
+        },
+        {
+          "path": "chapters/0021.md",
+          "sha256": "fe9769977f27bfafaef7b85c7566971181280ed3380916871f3bbe1ad31d0980"
+        },
+        {
+          "path": "chapters/0022.md",
+          "sha256": "b73cd656a57bd027f7d0501df331a7f776f088347b6d1b81caf0924b2dc5fc13"
+        },
+        {
+          "path": "chapters/0023.md",
+          "sha256": "f4114ecd9925e8387f66406ec91e2d057d172d8261f4361d54a3cd589c01a261"
+        },
+        {
+          "path": "chapters/0024.md",
+          "sha256": "ca316fd53769b4e22c6fc978b838c62b08d744467b182dc79a4d1fc41828cb26"
+        },
+        {
+          "path": "chapters/0025.md",
+          "sha256": "f4cbe035cc0d837c19049b9162e3a2dbf860c54d86421d8cf954abf5e490bcb0"
+        },
+        {
+          "path": "chapters/0026.md",
+          "sha256": "7873e61d81bc9a2e13b7d9d7b4f257b777937ffa4a0be3054f50f98b486bee24"
+        },
+        {
+          "path": "chapters/0027.md",
+          "sha256": "53ede7f1b141ab5ac1d08a9c672d9b7568b418bd66c2a73d34557a6bc916904f"
+        },
+        {
+          "path": "chapters/0028.md",
+          "sha256": "eb357b09c90d103a2d2dd27a653aa6f338a89563deb23c98f37b364af6441d41"
+        },
+        {
+          "path": "chapters/0029.md",
+          "sha256": "ffa835017b8bbc0375c9eb50e876be4f7e9e1d20e8bfb83df112c9472f10b4fe"
+        },
+        {
+          "path": "chapters/0030.md",
+          "sha256": "2a0f654783623b8363f34f917730b1afa64364c101d67427b6abb6c78f524400"
+        }
+      ]
+    },
+    {
+      "slug": "pride-and-prejudice",
+      "version": "1.0.0",
+      "title": "Pride and Prejudice",
+      "authors": [
+        "Jane Austen"
+      ],
+      "language": "en",
+      "categories": [
+        "classics",
+        "fiction",
+        "romance"
+      ],
+      "license": "public-domain",
+      "summary": "Pride and Prejudice may today be one of Jane Austen’s most enduring novels, having been widely adapted to stage, screen, and other media since its publication in 1813. The novel tells the tale of five unmarried sisters and how their lives change when a wealthy eligible bachelor…",
+      "path": "books/en/pride-and-prejudice",
+      "files": [
+        {
+          "path": "book.json",
+          "sha256": "80ffdea0b91f34e94c5840561321e2b03d9a94d29c4493fefbb79b985ebe59e9"
+        },
+        {
+          "path": "chapters/0001.md",
+          "sha256": "7f6f39d3f2b85612b82107b6ac6b7f517a0c7b353730d7d5a1a5a12da4426ff9"
+        },
+        {
+          "path": "chapters/0002.md",
+          "sha256": "dbad8f6bb1dea8b6802ad56347c6add9f233feef838862a4a9bfa096ee769a72"
+        },
+        {
+          "path": "chapters/0003.md",
+          "sha256": "87a64827eb3a3f9bd12e59512e1cf00fdbf813cad84e02519063c2938930e0ac"
+        },
+        {
+          "path": "chapters/0004.md",
+          "sha256": "cd3991184f23427b1d8ebe0759aa2784a1301104b1b5acd7da87e9d0eda1eba9"
+        },
+        {
+          "path": "chapters/0005.md",
+          "sha256": "58fcafc4d724dd55d93f69b0cdbea31aeee7c108c11cf6ad4fe44f8ac3184166"
+        },
+        {
+          "path": "chapters/0006.md",
+          "sha256": "a9dc5514a45cf83c6674c535e0d5bdcb6290b534aeaa8bffacc91f7d7fc4e997"
+        },
+        {
+          "path": "chapters/0007.md",
+          "sha256": "3c98c72d2d2a6a0d0fdb2af50602a0b8beaecab0f3dc9f3af5af701dd11359d3"
+        },
+        {
+          "path": "chapters/0008.md",
+          "sha256": "a0ad6d59dad88732aef433741c543396c0cf94be4610c1a5eb831abb03ed00b8"
+        },
+        {
+          "path": "chapters/0009.md",
+          "sha256": "50131bfd26f8a13c359feabf7f7d8f65fe46a8bcbbabb464c83581d80f8d0658"
+        },
+        {
+          "path": "chapters/0010.md",
+          "sha256": "6e050addefd50042a1047237a2baf498191591e221aa20ead1b34bcffd08ada0"
+        },
+        {
+          "path": "chapters/0011.md",
+          "sha256": "4e5847cabf73eb1fc9496ba737aea828b9cd8d43b6aec38d0a3570439e03c36a"
+        },
+        {
+          "path": "chapters/0012.md",
+          "sha256": "a998da7983feeabb6698b2707fe3a2ead7e48b7b9239a383ce39efcb45797237"
+        },
+        {
+          "path": "chapters/0013.md",
+          "sha256": "f0b1bb8303a29b92ea9a6074a21ff48109a1af141e7cf2f50874cd9fe03ace75"
+        },
+        {
+          "path": "chapters/0014.md",
+          "sha256": "95c75c4c8e34507a8b6712a61793c0f52766a91d85cffc780f9873c8dbcdf9af"
+        },
+        {
+          "path": "chapters/0015.md",
+          "sha256": "61f84f11d6f0c6dece3d8a193e86783bd65f608923edb0b5b33c4ff3b462a8db"
+        },
+        {
+          "path": "chapters/0016.md",
+          "sha256": "a13f6d801abaf690daf364b3e90a4c0f03100e781aa38acbb22934a8ddfbd0ed"
+        },
+        {
+          "path": "chapters/0017.md",
+          "sha256": "c562bcc41ebce6ff27e52e7550d3a7a9eeefb5c35f08545e25a912c0e7410391"
+        },
+        {
+          "path": "chapters/0018.md",
+          "sha256": "8fe588f69d823ee5f5fceac8c7506c2d2cfdc8a507ecf91e8fb314b61802b7c0"
+        },
+        {
+          "path": "chapters/0019.md",
+          "sha256": "16169d3a42540d8459cf93ce041bbe1754fe2ed1949de5587801607529607dc5"
+        },
+        {
+          "path": "chapters/0020.md",
+          "sha256": "bc1a5f0f87053cc79edec99b690a8d27ff0fb958aff4de67d77243ace026aa35"
+        },
+        {
+          "path": "chapters/0021.md",
+          "sha256": "6b957ca39eb21616e212e44b8071ec4ee071b31cfd89dd442361436b39b6d84f"
+        },
+        {
+          "path": "chapters/0022.md",
+          "sha256": "43e15b589b0a9110a3295b21a542dab3811e0f9e9ad94d1a0224ffd6d905bd16"
+        },
+        {
+          "path": "chapters/0023.md",
+          "sha256": "68cb6caaff107f7f9819e4471a735debbf0d6b78ecdb2a93cd45c654526150f9"
+        },
+        {
+          "path": "chapters/0024.md",
+          "sha256": "a7ccadd8e010a5aa20fe8c043ab5ba31f755d463528f9a6d09a7098aafd68f7a"
+        },
+        {
+          "path": "chapters/0025.md",
+          "sha256": "79b44fb2fcc6783f777d12495da25718e6374341eecb690870b236a9f1823f53"
+        },
+        {
+          "path": "chapters/0026.md",
+          "sha256": "4b57b425fe35219a4fda013c87d4e63e40ae124f6347250228b9a4dc18bdea9a"
+        },
+        {
+          "path": "chapters/0027.md",
+          "sha256": "971120f37d04ae060689ffe2089dd25dac6bba9aee2623623ff568419bb241eb"
+        },
+        {
+          "path": "chapters/0028.md",
+          "sha256": "d41635c95de2a6dc72882561176a861ddc599a6279e61ea55c7b0680644c9b39"
+        },
+        {
+          "path": "chapters/0029.md",
+          "sha256": "899a1e73d6198ae2fcdcc0b75968f7f174325b6694b07361f196df2e45cae6af"
+        },
+        {
+          "path": "chapters/0030.md",
+          "sha256": "2389c24978257298e03188cd971437e0d16eb5089d110295063ab3808943a25d"
+        },
+        {
+          "path": "chapters/0031.md",
+          "sha256": "315de65c186282a251738d23a7fdbf4eea5172f5b9a0dfc3d2a050e1509998d7"
+        },
+        {
+          "path": "chapters/0032.md",
+          "sha256": "963469adfce7ca16a4bdcbef52b61af5dc47008735c19d8a35b00f0753a3a722"
+        },
+        {
+          "path": "chapters/0033.md",
+          "sha256": "1f2d5f6b4ac7f92c74e04385dda2a1f282c6b657b12c2eb2a6cf564c0d8cfd67"
+        },
+        {
+          "path": "chapters/0034.md",
+          "sha256": "0f7eab04ce9768bcfdc643567d861b5f684b25345d3896bf1f21f619e17a9034"
+        },
+        {
+          "path": "chapters/0035.md",
+          "sha256": "0e0f96813420e51eaa81cf1967fea3fa2289de83c68df113bf0a2ca9a8bb07cd"
+        },
+        {
+          "path": "chapters/0036.md",
+          "sha256": "a4d437b6771828b13d54b42d8eb0b21395fb6f46bd75a31a4f46ee5d90b51036"
+        },
+        {
+          "path": "chapters/0037.md",
+          "sha256": "58170c363672c0ad6ecb99d06b10a12c66dd3a032f1fa0e05c9234ba0be727ca"
+        },
+        {
+          "path": "chapters/0038.md",
+          "sha256": "9df2e2e698ae3229fa83317df24b4bbff966bfbe2ddc0cd45e7b1a0bcfb772ab"
+        },
+        {
+          "path": "chapters/0039.md",
+          "sha256": "b37b2599d4896a589b02b561c177258170f8e9e9b2443bab86d816a72206e1dd"
+        },
+        {
+          "path": "chapters/0040.md",
+          "sha256": "04a1b3af85aefcb5f0c98c93639c0389614c541a711b59317dc0dc11728d2d12"
+        },
+        {
+          "path": "chapters/0041.md",
+          "sha256": "ab331213c76224ce81263de84fb3804ed7c0e051d78b7ff14c4d149124b7198a"
+        },
+        {
+          "path": "chapters/0042.md",
+          "sha256": "ba0dcabeffe9b4072f9eeaccfc411d31bdfaf0b6e53fd3c2e9f4ba6b9c18fef3"
+        },
+        {
+          "path": "chapters/0043.md",
+          "sha256": "e152c4271f40b9451c8920b12e784de902c9647b38aa4e78f27490af6bbaf3ec"
+        },
+        {
+          "path": "chapters/0044.md",
+          "sha256": "ca896c633691d8d73bb641a7cba8bb5d0565047e09e12eaba642d71c2e6e92a9"
+        },
+        {
+          "path": "chapters/0045.md",
+          "sha256": "97d5970434ab0eec4aec5579b1be3fd70589ded440929fa227c2f4972167bf31"
+        },
+        {
+          "path": "chapters/0046.md",
+          "sha256": "f435ae54d2955ea533604492632de1532ed7df0b1d2997afd8dae458f7655945"
+        },
+        {
+          "path": "chapters/0047.md",
+          "sha256": "6a4391302e266d2745084ac652f401849aa729fd07634a41253e581d2ca9bff3"
+        },
+        {
+          "path": "chapters/0048.md",
+          "sha256": "b1d4aa86adf4f8e27161c2e5b26c05ceb50cd78886326a8f82ff5fc30e12cd77"
+        },
+        {
+          "path": "chapters/0049.md",
+          "sha256": "38f3134843b91adfd72f7af83d06bede7fc6aa769f47e03a3276701ee12aa3bf"
+        },
+        {
+          "path": "chapters/0050.md",
+          "sha256": "3337c31662755b0237159ded69a896feb1d4ecb7b7a5b401c4427e041297649e"
+        },
+        {
+          "path": "chapters/0051.md",
+          "sha256": "3d078fcceecd1868dcb9ad9176dff39bc576129aa4a79a9976f8d4e2867859e1"
+        },
+        {
+          "path": "chapters/0052.md",
+          "sha256": "b5f55254b36bc6822e64b6dd066e1877bb529b305304463bbb830499e9272881"
+        },
+        {
+          "path": "chapters/0053.md",
+          "sha256": "5d699d102a2449432c2fdcb217cb98781353897f98d65fbc526b7018d79c6f0f"
+        },
+        {
+          "path": "chapters/0054.md",
+          "sha256": "02c0c9d7064eed0baf3198369fdfdead9a15160c762bc0faa95e6c7366766415"
+        },
+        {
+          "path": "chapters/0055.md",
+          "sha256": "cc5d9668f226aa720cd90446771a0a33ad8ba8a302bdb69e98438e91587b3271"
+        },
+        {
+          "path": "chapters/0056.md",
+          "sha256": "f1a985fca3bef4c2916503df640b3edbc6e9f75d3a80e2445bca556b2b479c8e"
+        },
+        {
+          "path": "chapters/0057.md",
+          "sha256": "241aed49cd661ff51a7586f65532977bfed0e4d4fefb39185c57444bff4beae2"
+        },
+        {
+          "path": "chapters/0058.md",
+          "sha256": "b4666f606e1d4eea122a401a557c820e16f73a9ab1c77728994f80411e58dc88"
+        },
+        {
+          "path": "chapters/0059.md",
+          "sha256": "9c45ee7ec8db8039290f58c3f71f720b6efa4d4a11c921bb4be3d7aa0a9a4c1c"
+        },
+        {
+          "path": "chapters/0060.md",
+          "sha256": "bac17ff5ae533d98cb6a35948d6a3e3bc4f430eb1d44ae40b50b2dd6994d5555"
+        },
+        {
+          "path": "chapters/0061.md",
+          "sha256": "e1b7aef2be36c667b8f233c7502b62dd1a145c84469f4d43b96cceebcacbc49b"
+        }
+      ]
+    },
+    {
+      "slug": "the-time-machine",
+      "version": "1.0.0",
+      "title": "The Time Machine",
+      "authors": [
+        "H. G. Wells"
+      ],
+      "language": "en",
+      "categories": [
+        "classics",
+        "fiction"
+      ],
+      "license": "public-domain",
+      "summary": "The Time Machine is the novel that gave us the concept of—and even the word for—a “time machine.” While it’s not Wells’ first story involving time travel, it is the one that most fully fleshes out the concept of a device that can send a person backwards and forwards in time…",
+      "path": "books/en/the-time-machine",
+      "files": [
+        {
+          "path": "book.json",
+          "sha256": "ceec1162b46a1ddd4741b50f86c27251c07037ff0f7def040d542d15a07cc556"
+        },
+        {
+          "path": "chapters/0001.md",
+          "sha256": "764c9d068df0b1f733ec38d15b827def0aa47a06644b208e311ed9726199dfd5"
+        },
+        {
+          "path": "chapters/0002.md",
+          "sha256": "68786c46e6400fdb611cf64c1412b3f8400b39a871991ae771797734e6a68c62"
+        },
+        {
+          "path": "chapters/0003.md",
+          "sha256": "a79770c1819ce611e096cf1af16ef3c673bd54083ef7182f6a67f74bfefd1e11"
+        },
+        {
+          "path": "chapters/0004.md",
+          "sha256": "8372ddca40161bbc31ade77d35becb6f4d5bb20daaaf9004f89d41fadc3014f8"
+        },
+        {
+          "path": "chapters/0005.md",
+          "sha256": "b28f551846b0e0125685d6d69df58249a5dbaac53f8a1ca4b0f75c1fc9447cf6"
+        },
+        {
+          "path": "chapters/0006.md",
+          "sha256": "dde5946105e6438e10895dccdf5f94eff270df02eede4aa67b7216e3b6817bd4"
+        },
+        {
+          "path": "chapters/0007.md",
+          "sha256": "c51815bda59a372afa892ffcee658735dd189a9b7f4d79d1cd5d0092fcec8072"
+        },
+        {
+          "path": "chapters/0008.md",
+          "sha256": "27e3b6df12c2d150d7d3d9d178ff5b052f9bc4779d8f4ec4ac7154a584b4fd7c"
+        },
+        {
+          "path": "chapters/0009.md",
+          "sha256": "79dce920bdc92174ff94892c15a39b3b795bed324777fe09a72694bbec81e152"
+        },
+        {
+          "path": "chapters/0010.md",
+          "sha256": "7887b04fe397b66fe59c11b99bd1718357eff57f8cd8b5d63d83211e53fd3b58"
+        },
+        {
+          "path": "chapters/0011.md",
+          "sha256": "ebfde8f5dfbf8e12c8c4013567418bdd494a44597fa67b537727155fbb03c158"
+        },
+        {
+          "path": "chapters/0012.md",
+          "sha256": "e35d8d7c56d53a422a2b435fc9257017c1d4774d738cdc3b4b7f1fedb9bfa9fe"
+        },
+        {
+          "path": "chapters/0013.md",
+          "sha256": "9600565487c7cf9d6706925325e609c0b4b40c2dd91b61b5916d927f7832ba75"
         }
       ]
     }
