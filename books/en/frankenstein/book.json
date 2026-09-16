@@ -1,0 +1,138 @@
+{
+  "title": "Frankenstein",
+  "authors": [
+    "Mary Shelley"
+  ],
+  "language": "en",
+  "categories": [
+    "classics",
+    "fiction",
+    "science-fiction"
+  ],
+  "license": "public-domain",
+  "source": "https://standardebooks.org/ebooks/mary-shelley/frankenstein",
+  "version": "1.0.0",
+  "summary": "Mary Shelley (then Godwin) and Percy Bysshe Shelley were visiting their friend Lord Byron in Geneva one rainy summer. With the weather against them, they decided to spend their time writing ghost stories for each other. Frankenstein is Mary Shelley’s submission to their…",
+  "chapters": [
+    {
+      "title": "Introduction",
+      "file": "chapters/0001.md"
+    },
+    {
+      "title": "Preface",
+      "file": "chapters/0002.md"
+    },
+    {
+      "title": "Letter I",
+      "file": "chapters/0003.md"
+    },
+    {
+      "title": "Letter II",
+      "file": "chapters/0004.md"
+    },
+    {
+      "title": "Letter III",
+      "file": "chapters/0005.md"
+    },
+    {
+      "title": "Letter IV",
+      "file": "chapters/0006.md"
+    },
+    {
+      "title": "Chapter I",
+      "file": "chapters/0007.md"
+    },
+    {
+      "title": "Chapter II",
+      "file": "chapters/0008.md"
+    },
+    {
+      "title": "Chapter III",
+      "file": "chapters/0009.md"
+    },
+    {
+      "title": "Chapter IV",
+      "file": "chapters/0010.md"
+    },
+    {
+      "title": "Chapter V",
+      "file": "chapters/0011.md"
+    },
+    {
+      "title": "Chapter VI",
+      "file": "chapters/0012.md"
+    },
+    {
+      "title": "Chapter VII",
+      "file": "chapters/0013.md"
+    },
+    {
+      "title": "Chapter VIII",
+      "file": "chapters/0014.md"
+    },
+    {
+      "title": "Chapter IX",
+      "file": "chapters/0015.md"
+    },
+    {
+      "title": "Chapter X",
+      "file": "chapters/0016.md"
+    },
+    {
+      "title": "Chapter XI",
+      "file": "chapters/0017.md"
+    },
+    {
+      "title": "Chapter XII",
+      "file": "chapters/0018.md"
+    },
+    {
+      "title": "Chapter XIII",
+      "file": "chapters/0019.md"
+    },
+    {
+      "title": "Chapter XIV",
+      "file": "chapters/0020.md"
+    },
+    {
+      "title": "Chapter XV",
+      "file": "chapters/0021.md"
+    },
+    {
+      "title": "Chapter XVI",
+      "file": "chapters/0022.md"
+    },
+    {
+      "title": "Chapter XVII",
+      "file": "chapters/0023.md"
+    },
+    {
+      "title": "Chapter XVIII",
+      "file": "chapters/0024.md"
+    },
+    {
+      "title": "Chapter XIX",
+      "file": "chapters/0025.md"
+    },
+    {
+      "title": "Chapter XX",
+      "file": "chapters/0026.md"
+    },
+    {
+      "title": "Chapter XXI",
+      "file": "chapters/0027.md"
+    },
+    {
+      "title": "Chapter XXII",
+      "file": "chapters/0028.md"
+    },
+    {
+      "title": "Chapter XXIII",
+      "file": "chapters/0029.md"
+    },
+    {
+      "title": "Chapter XXIV",
+      "file": "chapters/0030.md"
+    }
+  ]
+}
