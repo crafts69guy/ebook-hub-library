@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "categories": [
     "adventure",
+    "architecture",
     "biography",
     "children",
     "classics",
@@ -10,14 +11,17 @@
     "fantasy",
     "fiction",
     "history",
+    "mathematics",
     "mystery",
     "philosophy",
     "poetry",
+    "reference",
     "religion",
     "romance",
     "science",
     "science-fiction",
     "short-stories",
+    "technology",
     "travel"
   ]
 }
