@@ -8,7 +8,14 @@ export const REPOSITORY = "https://github.com/crafts69guy/ebook-hub-library";
 export const REF = "main";
 
 export const BOOK_FILE = "book.json";
-export const ALLOWED_LICENSES = ["public-domain", "CC0-1.0", "CC-BY-4.0", "CC-BY-SA-4.0"] as const;
+export const ALLOWED_LICENSES = [
+  "public-domain",
+  "CC0-1.0",
+  "CC-BY-4.0",
+  "CC-BY-SA-4.0",
+  "CC-BY-3.0",
+  "CC-BY-SA-3.0",
+] as const;
 
 export const LANGUAGE_PATTERN = /^[a-z]{2,3}$/;
 export const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
