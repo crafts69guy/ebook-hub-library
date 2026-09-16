@@ -1,0 +1,69 @@
+{
+  "title": "The Time Machine",
+  "authors": [
+    "H. G. Wells"
+  ],
+  "language": "en",
+  "categories": [
+    "classics",
+    "fiction"
+  ],
+  "license": "public-domain",
+  "source": "https://standardebooks.org/ebooks/h-g-wells/the-time-machine",
+  "version": "1.0.0",
+  "summary": "The Time Machine is the novel that gave us the concept of—and even the word for—a “time machine.” While it’s not Wells’ first story involving time travel, it is the one that most fully fleshes out the concept of a device that can send a person backwards and forwards in time…",
+  "chapters": [
+    {
+      "title": "I",
+      "file": "chapters/0001.md"
+    },
+    {
+      "title": "II",
+      "file": "chapters/0002.md"
+    },
+    {
+      "title": "III",
+      "file": "chapters/0003.md"
+    },
+    {
+      "title": "IV",
+      "file": "chapters/0004.md"
+    },
+    {
+      "title": "V",
+      "file": "chapters/0005.md"
+    },
+    {
+      "title": "VI",
+      "file": "chapters/0006.md"
+    },
+    {
+      "title": "VII",
+      "file": "chapters/0007.md"
+    },
+    {
+      "title": "VIII",
+      "file": "chapters/0008.md"
+    },
+    {
+      "title": "IX",
+      "file": "chapters/0009.md"
+    },
+    {
+      "title": "X",
+      "file": "chapters/0010.md"
+    },
+    {
+      "title": "XI",
+      "file": "chapters/0011.md"
+    },
+    {
+      "title": "XII",
+      "file": "chapters/0012.md"
+    },
+    {
+      "title": "Epilogue",
+      "file": "chapters/0013.md"
+    }
+  ]
+}
