@@ -1,7 +1,80 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T15:29:59.477Z",
+  "generatedAt": "2026-09-16T04:39:13.564Z",
   "repository": "https://github.com/crafts69guy/ebook-hub-library",
   "ref": "main",
-  "books": []
+  "books": [
+    {
+      "slug": "alices-adventures-in-wonderland",
+      "version": "1.0.0",
+      "title": "Alice's Adventures in Wonderland",
+      "authors": [
+        "Lewis Carroll"
+      ],
+      "language": "en",
+      "categories": [
+        "fiction",
+        "children",
+        "classics",
+        "fantasy"
+      ],
+      "license": "public-domain",
+      "summary": "Alice follows a white rabbit down a hole into a nonsensical world of talking animals, riddles, and a very cross queen.",
+      "path": "books/en/alices-adventures-in-wonderland",
+      "files": [
+        {
+          "path": "book.json",
+          "sha256": "92ecbe8e042c43a162ebe7510f3be1d37e01aac7773f65bef712e944b996a9a5"
+        },
+        {
+          "path": "chapters/0001.md",
+          "sha256": "3a050fad6e03947d29fbf53da1fedf8a7c1015477ef2d1ffc75c4b71a5effe29"
+        },
+        {
+          "path": "chapters/0002.md",
+          "sha256": "505910579e58525756245bd1bb5ea2752ea92cc84b4a6e8e7409a6f747b4fc08"
+        },
+        {
+          "path": "chapters/0003.md",
+          "sha256": "fb8d1d2f9092fbb454d987e303221e0dc157b874e5a66fe6e367efc822437959"
+        },
+        {
+          "path": "chapters/0004.md",
+          "sha256": "447d8bacaa0dd4afb8c3c403ee0b915dae3c4801162330bae5a0eeeb3b126bea"
+        },
+        {
+          "path": "chapters/0005.md",
+          "sha256": "4f885a08678776d34a95eda6b9b870b475ebc0025e2bcd7d34175aa5cc815b03"
+        },
+        {
+          "path": "chapters/0006.md",
+          "sha256": "bd298ae4081a07b8cec66d1e363f537da2909b0fd56000d0bc3321898e5d7fb7"
+        },
+        {
+          "path": "chapters/0007.md",
+          "sha256": "624a92c6b635f9e7266b858aeb832f39cd376b4b1cd8e04a99f1807c11723446"
+        },
+        {
+          "path": "chapters/0008.md",
+          "sha256": "74a0495af68ee5cc3bb836a1d54b3f02082790e7bd79e7c9374a7d5997f09ddc"
+        },
+        {
+          "path": "chapters/0009.md",
+          "sha256": "63a41db24047f3572119c892a3aa5ef6af0aab74931bc763633c9c3a482efb45"
+        },
+        {
+          "path": "chapters/0010.md",
+          "sha256": "3933c149e218ed2a5f07c9c66820c48d51c52154521922e7d63d97a59af89cc7"
+        },
+        {
+          "path": "chapters/0011.md",
+          "sha256": "ca946dce7b6193f6e96adbc73ff82c0993eb31f69d5246804d4e72d4a3884b46"
+        },
+        {
+          "path": "chapters/0012.md",
+          "sha256": "0d34054ff3ab07c1861ec17c228803250aa45a0acfdcf1b451dc489aa05aba60"
+        }
+      ]
+    }
+  ]
 }
