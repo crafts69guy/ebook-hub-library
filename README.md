@@ -1,6 +1,6 @@
 # Ebook Hub Library
 
-Freely licensed books for the [Ebook Hub](https://github.com/crafts69guy/ebooks)
+Freely licensed books for the [Ebook Hub](https://github.com/crafts69guy/ebook-hub)
 Raycast extension. Every book here is public domain or Creative Commons, reviewed
 through pull requests, and published through a generated `index.json`.
 
